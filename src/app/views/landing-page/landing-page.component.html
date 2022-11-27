@@ -2,8 +2,8 @@
 <br>
 {{title}}
 <br><br>
-<textarea name="" id="" cols="30" rows="10" [value]="textBox"></textarea>
+<textarea name="" id="" cols="30" rows="10" [value]="userInput" #textInput></textarea>
 <br><br>
-<button (click)="onAddPost()">Save Post</button>
+<button (click)="onAddPost(textInput)">Save Post</button>
 <br><br>
 <p>{{newPost}}</p>

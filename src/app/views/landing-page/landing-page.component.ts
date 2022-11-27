@@ -12,13 +12,11 @@ export class LandingPageComponent implements OnInit {
 
   title: string = 'Landing page section';
 
-  textBox: string = 'Add your text message here.'
+  userInput: string = 'Enter your message here.'
 
   newPost: string = 'Post message.';
 
-  onAddPost() {
-    this.newPost = 'Changed it using the onAddPost function.';
-
-    this.textBox = 'onAddPost Function is called, and the text inside has been replaced.'
+  onAddPost(textInput: HTMLTextAreaElement) {
+    this.newPost = textInput.value;
   }
 }
