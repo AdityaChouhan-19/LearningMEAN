@@ -2,8 +2,15 @@
 <br>
 {{title}}
 <br><br>
-<textarea name="" id="" cols="30" rows="10" [(ngModel)]="userInput"></textarea>
+<input type="text" [value]="inputColor" #textInput>
 <br><br>
-<button (click)="onAddPost()">Save Post</button>
+<div>
+  <mat-form-field>
+    <textarea matInput name="" id="" cols="30" rows="10"
+    [(ngModel)]="userInput" [ngStyle]="{'background-color': textAreaBgColor}"></textarea>
+  </mat-form-field>
+</div>
+<br><br>
+<button (click)="onAddPost()" (click)="onChangeColor(textInput)">Save Post</button>
 <br><br>
 <p>{{newPost}}</p>

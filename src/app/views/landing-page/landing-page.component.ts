@@ -11,13 +11,19 @@ export class LandingPageComponent implements OnInit {
 
   ngOnInit(): void {}
 
+  //variables
   title: string = 'Landing page section';
 
-  userInput: string = 'Placeholder';
+  inputColor: string = 'Blue'
 
+  userInput: string = 'Placeholder';
   newPost: string = 'Post message.';
 
   onAddPost() {
     this.newPost = this.userInput;
+  }
+
+  onChangeColor(textInput: HTMLTextAreaElement){
+    this.textAreaBgColor = textInput.value;
   }
 }

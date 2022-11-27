@@ -1,0 +1,10 @@
+div{
+  width: 80%;
+  margin: auto;
+}
+
+mat-form-field
+, textarea{
+  width: 70%;
+}
+
