@@ -23,7 +23,7 @@ export class LandingPageComponent implements OnInit {
     this.newPost = this.userInput;
   }
 
-  onChangeColor(textInput: HTMLTextAreaElement){
+  onChangeColor(textInput: HTMLInputElement){
     this.textAreaBgColor = textInput.value;
   }
 }
