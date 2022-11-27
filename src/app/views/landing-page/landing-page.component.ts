@@ -6,17 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./landing-page.component.css'],
 })
 export class LandingPageComponent implements OnInit {
+  [x: string]: any;
   constructor() {}
 
   ngOnInit(): void {}
 
   title: string = 'Landing page section';
 
-  userInput: string = 'Enter your message here.'
+  userInput: string = 'Placeholder';
 
   newPost: string = 'Post message.';
 
-  onAddPost(textInput: HTMLTextAreaElement) {
-    this.newPost = textInput.value;
+  onAddPost() {
+    this.newPost = this.userInput;
   }
 }
